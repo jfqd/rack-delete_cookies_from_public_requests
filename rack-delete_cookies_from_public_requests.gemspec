@@ -1,9 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'rack/delete_cookies_from_public_requests/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "0.1.0"
+  spec.name          = "rack-delete_cookies_from_public_requests"
   spec.version       = Rack::DeleteCookiesFromPublicRequests::VERSION
   spec.authors       = ["Tejas Dinkar"]
   spec.email         = ["tejas@gja.in"]
