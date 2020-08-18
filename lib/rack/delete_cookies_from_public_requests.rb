@@ -8,7 +8,7 @@ module Rack
 
     def call(env)
       status, headers, body = @app.call(env)
-      if headers && /public/.match(headers["Cache-Control"])
+      if headers && (/public/.match(headers["Cache-Control"]) || status == 301)
         headers.delete("Set-Cookie")
       end
       [status, headers, body]
